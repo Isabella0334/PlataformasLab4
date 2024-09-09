@@ -40,7 +40,6 @@ fun Pantalla1Content() {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Título principal "Campus Central"
         Text(
             text = "Campus Central",
             fontSize = 24.sp,
@@ -50,7 +49,6 @@ fun Pantalla1Content() {
             modifier = Modifier.padding(bottom = 8.dp)
         )
 
-        // Imagen principal del campus
         Image(
             painter = painterResource(id = R.drawable.campus), // Reemplaza con la imagen correspondiente
             contentDescription = "Imagen del Campus",
@@ -61,7 +59,6 @@ fun Pantalla1Content() {
             contentScale = ContentScale.Crop
         )
 
-        // Sección "DESTACADOS"
         Text(
             text = "DESTACADOS",
             fontSize = 18.sp,
@@ -71,26 +68,24 @@ fun Pantalla1Content() {
                 .padding(start = 8.dp, bottom = 8.dp)
         )
 
-        // Fila de destacados
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             FeaturedItem(
-                imageRes = R.drawable.uvg1, // Reemplaza con la imagen correspondiente
+                imageRes = R.drawable.uvg1,
                 buttonText = "Service Now",
-                buttonColor = Color(0xFF4CAF50) // Verde
+                buttonColor = Color(0xFF4CAF50)
             )
             FeaturedItem(
-                imageRes = R.drawable.uvg2, // Reemplaza con la imagen correspondiente
+                imageRes = R.drawable.uvg2,
                 buttonText = "Actualidad UVG",
-                buttonColor = Color(0xFFB0BEC5) // Gris
+                buttonColor = Color(0xFFB0BEC5)
             )
         }
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Sección "SERVICIOS Y RECURSOS"
         Text(
             text = "SERVICIOS Y RECURSOS",
             fontSize = 18.sp,
@@ -100,18 +95,17 @@ fun Pantalla1Content() {
                 .padding(start = 8.dp, bottom = 8.dp)
         )
 
-        // Fila de servicios y recursos
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             FeaturedItem(
-                imageRes = R.drawable.uvg3, // Reemplaza con la imagen correspondiente
+                imageRes = R.drawable.uvg3,
                 buttonText = "Directorio de Servicios",
                 buttonColor = Color(0xFF4CAF50) // Verde
             )
             FeaturedItem(
-                imageRes = R.drawable.uvg4, // Reemplaza con la imagen correspondiente
+                imageRes = R.drawable.uvg4,
                 buttonText = "Portal Web Bibliotecas UVG",
                 buttonColor = Color(0xFFB0BEC5) // Gris
             )
@@ -123,7 +117,7 @@ fun Pantalla1Content() {
 fun FeaturedItem(imageRes: Int, buttonText: String, buttonColor: Color) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.width(150.dp) // Ancho consistente para cada ítem
+        modifier = Modifier.width(150.dp)
     ) {
         Image(
             painter = painterResource(id = imageRes),
@@ -135,7 +129,7 @@ fun FeaturedItem(imageRes: Int, buttonText: String, buttonColor: Color) {
         Button(
             onClick = { /* Acción cuando se presiona el botón */ },
             shape = RoundedCornerShape(12.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = buttonColor), // Corregido: containerColor
+            colors = ButtonDefaults.buttonColors(containerColor = buttonColor),
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 8.dp)

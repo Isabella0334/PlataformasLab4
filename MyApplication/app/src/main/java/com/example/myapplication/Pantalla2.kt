@@ -39,12 +39,10 @@ fun Pantalla2Content() {
         modifier = Modifier
             .fillMaxSize()
     ) {
-        // Sección superior con imagen de fondo y el contenido
         ProfileHeader()
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Lista de opciones del perfil
         ProfileOptionItem(iconRes = R.drawable.ic_campus, text = "My Campus", subtitle = "Campus Central")
         ProfileOptionItem(iconRes = R.drawable.ic_friends, text = "My Friends")
         ProfileOptionItem(iconRes = R.drawable.ic_calendar, text = "My Calendar")
@@ -57,51 +55,45 @@ fun Pantalla2Content() {
 
 @Composable
 fun ProfileHeader() {
-    // Stack para superponer imagen de fondo y contenido
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(300.dp) // Ajuste de la altura para acomodar mejor el contenido
+            .height(300.dp)
     ) {
-        // Imagen de fondo
         Image(
-            painter = painterResource(id = R.drawable.background_profile), // Imagen de fondo
+            painter = painterResource(id = R.drawable.background_profile),
             contentDescription = "Fondo de perfil",
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
         )
 
-        // Contenido superpuesto (nombre, ícono de perfil y configuración)
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
                 .fillMaxSize()
                 .padding(top = 32.dp)
         ) {
-            // Barra blanca superior con título
             TopBar()
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Imagen de perfil redonda
             Image(
-                painter = painterResource(id = R.drawable.profile_pic), // Imagen de perfil
+                painter = painterResource(id = R.drawable.profile_pic),
                 contentDescription = "Imagen de perfil",
                 modifier = Modifier
-                    .size(120.dp) // Tamaño de la imagen de perfil ajustado
+                    .size(120.dp)
                     .clip(CircleShape)
                     .background(Color.White, CircleShape)
             )
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            // Nombre de usuario con color blanco para mejor visibilidad
             Text(
-                text = "FRANCISCO ROGELIO ANZUETO MARROQUIN",
+                text = "JACK EL DRAGÓN",
                 fontWeight = FontWeight.Bold,
                 fontSize = 16.sp,
                 textAlign = TextAlign.Center,
-                color = Color.White, // Texto en blanco para destacar sobre el fondo
+                color = Color.White,
                 modifier = Modifier.padding(horizontal = 16.dp)
             )
         }
@@ -113,7 +105,7 @@ fun TopBar() {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color.White) // Fondo blanco para la barra superior
+            .background(Color.White)
             .padding(horizontal = 16.dp, vertical = 8.dp)
     ) {
         Row(
@@ -121,18 +113,16 @@ fun TopBar() {
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Título de la pantalla
             Text(
                 text = "My Profile",
                 fontWeight = FontWeight.Bold,
                 fontSize = 20.sp,
-                color = Color.Black // Texto en negro sobre el fondo blanco
+                color = Color.Black
             )
 
-            // Icono de configuración
             IconButton(onClick = { /* Acción de configuración */ }) {
                 Icon(
-                    painter = painterResource(id = R.drawable.ic_settings), // Icono de configuración
+                    painter = painterResource(id = R.drawable.ic_settings),
                     contentDescription = "Icono de configuración",
                     tint = Color.Black
                 )
@@ -149,7 +139,6 @@ fun ProfileOptionItem(iconRes: Int, text: String, subtitle: String = "") {
             .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Icono del item
         Icon(
             painter = painterResource(id = iconRes),
             contentDescription = text,
@@ -159,7 +148,6 @@ fun ProfileOptionItem(iconRes: Int, text: String, subtitle: String = "") {
 
         Spacer(modifier = Modifier.width(16.dp))
 
-        // Texto principal
         Column {
             Text(
                 text = text,
@@ -168,7 +156,6 @@ fun ProfileOptionItem(iconRes: Int, text: String, subtitle: String = "") {
                 color = Color.Black
             )
 
-            // Subtítulo si existe
             if (subtitle.isNotEmpty()) {
                 Text(
                     text = subtitle,

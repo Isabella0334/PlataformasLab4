@@ -40,10 +40,9 @@ fun Pantalla4Content() {
         TopBarEmergencyContacts()
 
         Spacer(modifier = Modifier.height(16.dp))
-
-        // Primer contacto de emergencia con imágenes
+        
         EmergencyContact(
-            iconRes = R.drawable.ic_emergency, // Reemplazar con el ícono de emergencia
+            iconRes = R.drawable.ic_emergency,
             title = "Emergencias",
             description = "Si se presenta un incidente o un percance, por favor marca el número de emergencia y rápidamente te apoyamos.",
             phoneNumber = "5978-1736"
@@ -51,9 +50,8 @@ fun Pantalla4Content() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Segundo contacto de emergencia con imágenes
         EmergencyContact(
-            iconRes = R.drawable.ic_clinic, // Reemplazar con el ícono de la clínica
+            iconRes = R.drawable.ic_clinic,
             title = "Clínica UVG",
             description = """
                 La Clínica UVG presta los siguientes servicios:
@@ -79,7 +77,7 @@ fun TopBarEmergencyContacts() {
     ) {
         IconButton(onClick = { /* Acción para volver */ }) {
             Icon(
-                painter = painterResource(id = R.drawable.ic_back), // Reemplaza con el ícono de atrás
+                painter = painterResource(id = R.drawable.ic_back),
                 contentDescription = "Back",
                 tint = Color.Black
             )
@@ -137,10 +135,9 @@ fun EmergencyContact(iconRes: Int, title: String, description: String, phoneNumb
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Número de teléfono con botón
         Button(
             onClick = { /* Acción de llamada */ },
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4CAF50)), // Botón verde
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4CAF50)),
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(text = "Call $phoneNumber")

@@ -41,7 +41,6 @@ fun Pantalla3Content() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Opciones del menú de configuraciones con imágenes
         SettingOption(iconRes = R.drawable.profile_pic, text = "Edit Profile")
         SettingOption(iconRes = R.drawable.ic_email, text = "Email Addresses")
         SettingOption(iconRes = R.drawable.ic_notifications, text = "Notifications")
@@ -54,7 +53,6 @@ fun Pantalla3Content() {
 
         Spacer(modifier = Modifier.weight(1f))
 
-        // Botón de Logout
         Text(
             text = "Logout",
             fontWeight = FontWeight.Bold,
@@ -77,7 +75,7 @@ fun TopBarSettings() {
     ) {
         IconButton(onClick = { /* Acción para volver */ }) {
             Icon(
-                painter = painterResource(id = R.drawable.ic_back), // Reemplaza con el ícono de atrás
+                painter = painterResource(id = R.drawable.ic_back),
                 contentDescription = "Back",
                 tint = Color.Black
             )
@@ -92,7 +90,7 @@ fun TopBarSettings() {
 
         IconButton(onClick = { /* Acción de ajustes */ }) {
             Icon(
-                painter = painterResource(id = R.drawable.ic_settings), // Ícono de ajustes
+                painter = painterResource(id = R.drawable.ic_settings),
                 contentDescription = "Settings",
                 tint = Color.Black
             )
