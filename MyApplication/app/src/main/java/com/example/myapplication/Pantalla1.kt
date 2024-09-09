@@ -50,7 +50,7 @@ fun Pantalla1Content() {
         )
 
         Image(
-            painter = painterResource(id = R.drawable.campus), // Reemplaza con la imagen correspondiente
+            painter = painterResource(id = R.drawable.campus),
             contentDescription = "Imagen del Campus",
             modifier = Modifier
                 .fillMaxWidth()
