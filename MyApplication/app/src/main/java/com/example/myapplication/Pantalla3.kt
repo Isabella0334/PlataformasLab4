@@ -73,7 +73,7 @@ fun TopBarSettings() {
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        IconButton(onClick = { /* Acción para volver */ }) {
+        IconButton(onClick = {  }) {
             Icon(
                 painter = painterResource(id = R.drawable.ic_back),
                 contentDescription = "Back",

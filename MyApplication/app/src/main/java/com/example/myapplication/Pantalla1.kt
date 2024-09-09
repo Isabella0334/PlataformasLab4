@@ -51,7 +51,7 @@ fun Pantalla1Content() {
 
         Image(
             painter = painterResource(id = R.drawable.campus),
-            contentDescription = "Imagen del Campus",
+            contentDescription = "Imagen Campus",
             modifier = Modifier
                 .fillMaxWidth()
                 .height(180.dp)

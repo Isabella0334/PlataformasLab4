@@ -120,7 +120,7 @@ fun TopBar() {
                 color = Color.Black
             )
 
-            IconButton(onClick = { /* Acción de configuración */ }) {
+            IconButton(onClick = {  }) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_settings),
                     contentDescription = "Icono de configuración",

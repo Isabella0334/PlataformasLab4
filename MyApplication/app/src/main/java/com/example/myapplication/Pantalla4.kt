@@ -90,9 +90,9 @@ fun TopBarEmergencyContacts() {
             color = Color.Black
         )
 
-        IconButton(onClick = { /* Acción de ajustes */ }) {
+        IconButton(onClick = { }) {
             Icon(
-                painter = painterResource(id = R.drawable.ic_settings), 
+                painter = painterResource(id = R.drawable.ic_settings),
                 contentDescription = "Settings",
                 tint = Color.Black
             )
